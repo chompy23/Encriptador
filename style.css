@@ -1,0 +1,172 @@
+/* Encriptador - 1 Desktop */
+
+html {
+    width: 1366px;
+    height: 500px;
+}
+
+body {
+    width: 100%;
+    height: 60%;
+    background-color: #F3F5FC;
+}
+
+#operativo {
+    display: block;
+    width: 70%;
+    height: 100%;
+    background-color: #F3F5FC;
+    float: left;
+}
+
+.formulario{
+    position: relative;
+    top: 40%;
+}
+
+.texto-analizar {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: blue;
+}
+
+.operaciones {
+    position: relative;
+    top: 130%;
+    left: 10%;
+}
+
+.operaciones button {
+    width: 30%;
+    height: 40px;
+    margin: 0px 40px;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+
+.operacionEncriptar {
+    background-image: url("imagenes/Button.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.operacionEncriptar:hover {
+    position: relative;
+    background-color: rgb(175, 180, 142);
+    border-radius: 40px;
+    width: 40%;
+    height: 60px;
+    bottom: 7%;
+    left: 7%;
+    cursor: pointer;
+
+}
+
+.operacionDesencriptar {
+    background-image: url(imagenes/Button\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+}
+
+.operacionDesencriptar:hover {
+    position: relative;
+    background-color: rgb(175, 180, 142);
+    border-radius: 40px;
+    width: 40%;
+    height: 60px;
+    bottom: 7%;
+    right: 7%;
+    cursor: pointer;
+
+}
+
+#ventana-lateral {
+    display: inline-block;
+    width: 30%;
+    height: 150%;
+    left: 50%;
+    background-color: #F3F5FC;
+}
+
+.figura {
+    position: relative;
+    width: 70%;
+    height: 130%;
+    left: 10%;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: #F3F5FC;
+    box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
+}
+
+.texto-encriptado {
+    display: block;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+.texto-encriptado p {
+    width: 220px;
+    height: 250px;
+    font-weight: bold;
+}
+
+.muñeco {
+    position: relative;
+    width: 55%;
+    height: 30%;
+    top: -15%;
+    left: 16%;
+    margin-bottom: 5%;
+
+}
+
+.sinMensaje {
+    position: relative;
+    width: 250px;
+    height: 120px;
+    top: -15%;
+    left: 5%;
+    margin-bottom: 5%;
+    visibility: hidden;
+}
+
+.copiar {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    bottom: 20%;
+    left: 20%;
+    margin-top: 5%;
+}
+
+.copiar button {
+    position: relative;
+    width: 180px;
+    height: 30px;
+    background-color: rgb(233, 187, 170);
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.copiar button:hover {
+    position: relative;
+    background-color: rgb(175, 180, 142);
+    border-radius: 40px;
+    width: 220px;
+    height: 50px;
+    bottom: 7%;
+    right:  5%;
+    cursor: pointer;
+
+}
