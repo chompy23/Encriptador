@@ -1,33 +1,32 @@
 /* Encriptador - 1 Desktop */
 
 html {
-    width: 1366px;
-    height: 500px;
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
     width: 100%;
-    height: 60%;
+    height: 100%;
     background-color: #F3F5FC;
 }
 
 #operativo {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 70%;
     height: 100%;
     background-color: #F3F5FC;
     float: left;
 }
 
-.formulario {
-    position: relative;
-    top: 40%;
-}
-
 .texto-analizar {
+    display: block;
     position: relative;
     top: 20%;
-    left: 30%;
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: blue;
@@ -35,12 +34,13 @@ body {
 
 .operaciones {
     position: relative;
-    top: 130%;
-    left: 10%;
+    top: 60%;
+    left: 5%;
+    width: 80%;
 }
 
 .operaciones button {
-    width: 30%;
+    width: 35%;
     height: 40px;
     margin: 0px 40px;
     border-radius: 30px;
@@ -85,9 +85,10 @@ body {
 }
 
 #ventana-lateral {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 30%;
-    height: 150%;
+    height: 80%;
     left: 50%;
     background-color: #F3F5FC;
 }
@@ -95,9 +96,8 @@ body {
 .figura {
     position: relative;
     width: 70%;
-    height: 130%;
     left: 10%;
-    border: 2px solid red;
+    height: 100%;
     border-radius: 20px;
     background-color: #F3F5FC;
     box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
@@ -106,51 +106,66 @@ body {
 .texto-encriptado {
     display: block;
     position: relative;
+    width: 70%;
     top: 5%;
-    left: 5%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #000000;
+    margin-bottom: 20px;
 }
 
+
 .texto-encriptado p {
-    width: 220px;
-    height: 250px;
+    width: 70%;
+    height: 40px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .muñeco {
-    position: relative;
-    width: 55%;
-    height: 30%;
-    top: -15%;
-    left: 16%;
+    position: absolute;
+    display: block;
+    background-image: url("imagenes/Muñeco.png");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 25%;
+
+    top: 30%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 25%;
     margin-bottom: 5%;
 
 }
 
-.sinMensaje {
-    position: relative;
-    width: 250px;
-    height: 120px;
-    top: -15%;
-    left: 5%;
+#verMensaje {
+    position: absolute;
+    display: block;
+    background-image: url("imagenes/Frame 5.png");
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 80px;
+    bottom: 15%;
+    left: 8%;
     margin-bottom: 5%;
     visibility: hidden;
 }
 
 .copiar {
     display: block;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
-    bottom: 20%;
-    left: 20%;
+    width: 80%;
+    top: 87%;
+    left: 12%;
     margin-top: 5%;
 }
 
 .copiar button {
-    position: relative;
-    width: 180px;
+    position: absolute;
+    width: 80%;
     height: 30px;
     background-color: rgb(233, 187, 170);
     border: 2px solid #e1e1e1;
@@ -171,38 +186,146 @@ body {
 
 }
 
+
+
 @media only screen and (max-width: 480px) {
+    html {
+        width: 100vw;
+        height: 100vh;
+    }
+
     body {
-        background-color: rgb(139, 138, 146);
-        width: 412px;
-        height: 823px;
+        display: flex;
+        flex-direction: column;
+        background-color: #F3F5FC;
+        box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
+        width: 100%;
+        height: 100%;
+    }
+
+    #encabezado {
+        margin: 40px 10px;
     }
 
     #operativo {
-        display: block;
+        display: flex;
         width: 100%;
         height: 50%;
         background-color: #F3F5FC;
-        
+        box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
+
     }
-    
+
+    .texto-analizar {
+        display: block;
+        position: relative;
+        top: 20%;
+        width: 50%;
+        height: 40px;
+        margin-left: 25%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: blue;
+    }
+
+    .operaciones {
+        position: relative;
+        top: 30%;
+        left: 5%;
+        width: 80%;
+    }
+
+    .operaciones button {
+        width: 80%;
+        height: 40px;
+        margin: 0 40px;
+        border-radius: 30px;
+        border: 4px solid black;
+    }
+
+
+    .operacionEncriptar:hover {
+        position: relative;
+        background-color: rgb(214, 217, 200);
+        border-bottom-style: dashed;
+        border-color: blue;
+        border-radius: 40px;
+        /*width: 40%;
+        height: 60px;
+        bottom: 7%;
+        left: 7%;*/
+        cursor: pointer;
+
+    }
+
+
+    .operacionDesencriptar:hover {
+        position: relative;
+        background-color: rgb(175, 180, 142);
+        border-radius: 40px;
+        /*width: 40%;
+        height: 60px;
+        bottom: 7%;
+        right: 7%;*/
+        cursor: pointer;
+
+    }
 
     #ventana-lateral {
-        display: block;
+        display: flex;
         width: 100%;
         height: 50%;
         left: 50%;
         background-color: #F3F5FC;
+        box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
     }
 
     .figura {
-        
-        width: 20%;
-        height: 20%;
-        border: 2px solid red;
-        border-radius: 20px;
-        background-color: #F3F5FC;
-        box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);
+        width: 99%;
+        height: 100%;
+        left: 4px;
+        box-sizing: content-box;
+
+
     }
+
+    .texto-encriptado {
+        display: block;
+        position: relative;
+        top: -10%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .muñeco {
+        width: 50%;
+        height: 40%;
+        top: 15%;
+        margin-top: 20px;
+        margin-left: 20%;
+        margin-right: 25%;
+        margin-bottom: 5%;
+
+    }
+
+    #verMensaje {
+        width: 50%;
+        height: 80px;
+        bottom: 10%;
+        left: 23%;
+        margin-bottom: 5%;
+        visibility: hidden;
+    }
+
+    .copiar {
+        box-sizing: border-box;
+        top: 80%;
+        left: 15%;
+        margin-top: 5%;
+    }
+
+
 
 }
