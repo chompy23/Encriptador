@@ -39,7 +39,7 @@ h1 {
 .nombreprogramador {
     position: relative;
     display: inline-block;
-    right: -35%;
+    left: 40%;
     font-size: 1em;
     font-weight: bold;
     font-style: italic;
@@ -254,6 +254,16 @@ h1 {
         font-style: oblique;
     }
 
+    .nombreprogramador {
+        position: relative;
+        display: block;
+        left: 50%;
+        font-size: 1em;
+        font-weight: bold;
+        font-style: italic;
+
+    }
+
     #operativo {
         display: flex;
         width: 100%;
@@ -310,11 +320,11 @@ h1 {
     .operacionDesencriptar:hover {
         opacity: 0.5;
     }
-    
+
     #ventana-lateral {
         display: flex;
         width: 100%;
-        height: 50%;
+        height: 48%;
         left: 50%;
         background-color: #F3F5FC;
         box-shadow: inset 20px 20px 60px 60px rgb(221, 209, 186);

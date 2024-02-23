@@ -21,7 +21,7 @@ function encriptar() {
     document.getElementsByClassName("tex")[0].value = "";
 
     /* Paso el texto a minusculas*/
-    texEnc = (document.getElementById("texenc").value).toLowerCase().toString();
+    texEnc = (document.getElementById("texenc").value).toString();
 
     /* Si intenta codificar un texto en blanco activo el mensaje*/
     if (texEnc === "") {
@@ -32,22 +32,17 @@ function encriptar() {
     for (let index = 0; index < texEnc.length; index++) {
         if ((texEnc.charCodeAt(index) >= 33) && (texEnc.charCodeAt(index) <= 47)) {
             document.getElementById("texenc").value = "";
-            alert("Sin acentos ni Simbolos especiales");
+            alert("Sin mayusculas, acentos ni Simbolos especiales");
             noEnc = false;
             break;
-        } else if ((texEnc.charCodeAt(index) >= 58) && (texEnc.charCodeAt(index) <= 64)) {
+        } else if ((texEnc.charCodeAt(index) >= 58) && (texEnc.charCodeAt(index) <= 96)) {
             document.getElementById("texenc").value = "";
-            alert("Sin acentos ni Simbolos especiales");
-            noEnc = false;
-            break;
-        } else if ((texEnc.charCodeAt(index) >= 91) && (texEnc.charCodeAt(index) <= 96)) {
-            document.getElementById("texenc").value = "";
-            alert("Sin acentos ni Simbolos especiales");
+            alert("Sin mayusculas,  acentos ni Simbolos especiales");
             noEnc = false;
             break;
         } else if (texEnc.charCodeAt(index) >= 123) {
             document.getElementById("texenc").value = "";
-            alert("Sin acentos ni Simbolos especiales");
+            alert("Sin mayusculas,  acentos ni Simbolos especiales");
             noEnc = false;
             break;
         }
@@ -94,7 +89,7 @@ function transferirTexto() {
 
     /* Preparo el mensaje a decodificar  y lo envio al campo de ingreso de Texto a Codificar/Decodificar */
     transfTexDesencr = document.getElementsByClassName("tex")[0].innerHTML;
-
+    document.getElementsByClassName("tex")[0].innerHTML = "";
     /* Si intenta decodificar un texto en blanco; activo el mensaje*/
     if ((transfTexDesencr == "") || (transfTexDesencr == " ")) {
         document.getElementById("verMensaje").style.visibility = "visible";
@@ -110,24 +105,24 @@ function desencriptar() {
 
     /* Cargo el texto a Desencriptar*/
     texDesenc = (document.getElementById("texenc").value).toLowerCase().toString();
-    
-     /* Si intenta decodificar un texto en blanco; activo el mensaje*/
+
+    /* Si intenta decodificar un texto en blanco; activo el mensaje*/
     if ((texDesenc == "") || (texDesenc == " ")) {
         document.getElementById("verMensaje").style.visibility = "visible";
     } else {
-       /* Operaciòn de desencriptado*/
-    let expcomp = ["ai", "enter", "imes", "ober", "ufat"];
-    let letras = ["a", "e", "i", "o", "u"];
-    let cadenaa = desencrip(texDesenc, expcomp[0], letras[0]);
-    let cadenae = desencrip(cadenaa, expcomp[1], letras[1]);
-    let cadenai = desencrip(cadenae, expcomp[2], letras[2]);
-    let cadenao = desencrip(cadenai, expcomp[3], letras[3]);
-    let cadenau = desencrip(cadenao, expcomp[4], letras[4]);
+        /* Operaciòn de desencriptado*/
+        let expcomp = ["ai", "enter", "imes", "ober", "ufat"];
+        let letras = ["a", "e", "i", "o", "u"];
+        let cadenaa = desencrip(texDesenc, expcomp[0], letras[0]);
+        let cadenae = desencrip(cadenaa, expcomp[1], letras[1]);
+        let cadenai = desencrip(cadenae, expcomp[2], letras[2]);
+        let cadenao = desencrip(cadenai, expcomp[3], letras[3]);
+        let cadenau = desencrip(cadenao, expcomp[4], letras[4]);
 
-    /* Limpio el campo de ingreso de Mensaje a Codificar/Decodificar*/
-    document.getElementById("texenc").value = "";
+        /* Limpio el campo de ingreso de Mensaje a Codificar/Decodificar*/
+        document.getElementById("texenc").value = "";
 
-    document.getElementsByClassName("tex")[0].innerHTML = cadenau;
+        document.getElementsByClassName("tex")[0].innerHTML = cadenau;
     }
 }
 
