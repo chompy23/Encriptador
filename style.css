@@ -109,7 +109,7 @@ h1 {
 
 .operacionDesencriptar {
     background-image: url(imagenes/Button\ \(1\).png);
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 
@@ -204,7 +204,7 @@ h1 {
     position: absolute;
     box-sizing: border-box;
     width: 80%;
-    top: 87%;
+    top: 80%;
     left: 18%;
     margin-top: 5%;
 }
