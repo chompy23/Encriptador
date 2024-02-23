@@ -303,14 +303,14 @@ h1 {
         border-radius: 20px;
     }
 
-    .operacionDesencriptar:active {
+    .operacionEncriptar:hover {
         background-size: 90%;
     }
 
-    .operacionEncriptar:active {
-        background-size: 90%;
+    .operacionDesencriptar:hover {
+       background-size: 90%;
     }
-
+    
     #ventana-lateral {
         display: flex;
         width: 100%;
