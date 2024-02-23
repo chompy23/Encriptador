@@ -35,13 +35,14 @@ h1 {
     font-weight: bold;
     font-style: oblique;
 }
-.nombreprogramador{
+
+.nombreprogramador {
     position: relative;
     display: inline-block;
     right: -35%;
     font-size: 1em;
     font-weight: bold;
-    font-style:italic;
+    font-style: italic;
 
 }
 
@@ -54,9 +55,9 @@ h1 {
     background-color: #F3F5FC;
     background-image: url(imagenes/22112338_6534510.jpg);
     background-size: cover;
-    background-position:center;
-    box-shadow:  20px 20px 60px 60px  rgb(95, 66, 162);
-    box-sizing:content-box;
+    background-position: center;
+    box-shadow: 20px 20px 60px 60px rgb(95, 66, 162);
+    box-sizing: content-box;
     float: left;
 }
 
@@ -125,8 +126,8 @@ h1 {
     height: 90%;
     left: 50%;
     box-sizing: content-box;
-    
-    
+
+
 }
 
 .figura {
@@ -140,7 +141,7 @@ h1 {
     background-size: cover;
     background-position: center;
     /*box-shadow: inset 20px 20px 60px 60px  rgb(221, 209, 186);*/
-    box-shadow:  20px 20px 60px 60px  rgb(95, 66, 162);
+    box-shadow: 20px 20px 60px 60px rgb(95, 66, 162);
 }
 
 .figura h2 {
@@ -300,6 +301,14 @@ h1 {
         margin: 5px 5px;
         border-color: blue;
         border-radius: 20px;
+    }
+
+    .operacionDesencriptar:active {
+        background-size: 90%;
+    }
+
+    .operacionEncriptar:active {
+        background-size: 90%;
     }
 
     #ventana-lateral {
