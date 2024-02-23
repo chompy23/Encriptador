@@ -304,11 +304,11 @@ h1 {
     }
 
     .operacionEncriptar:hover {
-        background-size: 90%;
+        opacity: 0.5;
     }
 
     .operacionDesencriptar:hover {
-       background-size: 90%;
+        opacity: 0.5;
     }
     
     #ventana-lateral {
