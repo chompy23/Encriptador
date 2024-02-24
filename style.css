@@ -254,7 +254,7 @@ h1 {
         font-weight: bold;
         font-style: oblique;
     }
-
+ 
     .nombreprogramador {
         position: relative;
         display: block;
@@ -264,7 +264,7 @@ h1 {
         font-style: italic;
 
     }
-
+    
     #operativo {
         display: flex;
         width: 100%;
