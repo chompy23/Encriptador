@@ -227,12 +227,8 @@ h1 {
 }
 
 
-@media only screen and (max-width: 820px) {
-    html {
-        width: 100vw;
-        height: 100vh;
-    }
-
+@media  screen and (max-width: 820px) {
+   
     body {
         display: flex;
         flex-direction: column;
@@ -359,10 +355,11 @@ h1 {
         color: #000000;
         margin-bottom: 20px;
     }
-
+    
     .muñeco {
         width: 0%;
         height: 0%;
+        visibility: hidden;
     }
 
     #verMensaje {
@@ -371,7 +368,7 @@ h1 {
         height: 80px;
         bottom: 30%;
         left: 23%;
-        margin-bottom: 5%;
+        /*margin-bottom: 5%;*/
         visibility: hidden;
     }
 
